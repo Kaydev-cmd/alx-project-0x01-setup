@@ -89,3 +89,5 @@ const PostModal: React.FC<PostModalProps> = ({ onClose, onSubmit }) => {
     </div>
   );
 };
+
+export default PostModal;
