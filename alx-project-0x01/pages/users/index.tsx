@@ -15,33 +15,9 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
       <main className="p-4">
         <h1 className="text-2xl font-semibold">Users </h1>
         <div className="grid grid-cols-3 gap-4">
-          {users?.map(
-            (
-              {
-                name,
-                username,
-                email,
-                phone,
-                website,
-                id,
-                address,
-                company,
-              }: UserProps,
-              key: number
-            ) => (
-              <UserCard
-                key={key}
-                name={name}
-                username={username}
-                email={email}
-                phone={phone}
-                website={website}
-                id={id}
-                address={address}
-                company={company}
-              />
-            )
-          )}
+          {users?.map((users, key) => (
+            <UserCard key={key} {...users} />
+          ))}
         </div>
       </main>
     </div>
