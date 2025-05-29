@@ -13,7 +13,7 @@ type UserCardProps = Pick<
   | "company"
 >;
 
-const UserCard: React.FC<UserProps> = ({
+const UserCard: React.FC<UserCardProps> = ({
   name,
   username,
   email,
