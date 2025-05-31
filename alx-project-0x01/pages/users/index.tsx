@@ -59,6 +59,12 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
           )}
         </div>
       </main>
+      {isModalOpen && (
+        <UserModal
+          onClose={() => setModalOpen(false)}
+          onSubmit={handleAddUser}
+        />
+      )}
     </div>
   );
 };
