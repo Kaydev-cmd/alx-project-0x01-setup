@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UserCard from "@/components/common/UserCard";
+import UserModal from "@/components/common/UserModal";
 import Header from "@/components/layout/Header";
 import { UserData, UserProps } from "@/interfaces";
 
@@ -10,7 +11,11 @@ interface UsersPageProps {
 const Users: React.FC<UsersPageProps> = ({ users }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [post, setPost] = useState<UserData | null>(null);
-  console.log(users);
+
+  const handleAddUser = (newUser: UserData) => {
+    setPost({ ...newUser, id: users.length + 1 });
+  };
+
   return (
     <div className="flex flex-col h-screen">
       <Header />
