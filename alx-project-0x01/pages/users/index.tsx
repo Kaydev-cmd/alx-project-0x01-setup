@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
 import { UserProps } from "@/interfaces";
@@ -8,6 +8,7 @@ interface UsersPageProps {
 }
 
 const Users: React.FC<UsersPageProps> = ({ users }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
   console.log(users);
   return (
     <div className="flex flex-col h-screen">
