@@ -25,6 +25,12 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
       bs: "",
     },
   });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setPost((prevPost) => ({ ...prevPost, [name]: value }));
+  };
+
   return <div>UserModal</div>;
 };
 
