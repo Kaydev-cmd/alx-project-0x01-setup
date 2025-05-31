@@ -3,7 +3,7 @@ import { UserData, UserModalProps } from "@/interfaces";
 
 const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
   const [post, setPost] = useState<UserData>({
-    id: 0,
+    id: 1,
     name: "",
     username: "",
     email: "",
@@ -77,15 +77,15 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="userName"
+              htmlFor="username"
               className="block text-gray-700 font-medium mb-2"
             >
               User Name
             </label>
             <input
               type="text"
-              id="userName"
-              name="userName"
+              id="username"
+              name="username"
               value={post.username}
               onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -120,7 +120,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               type="text"
               id="address"
               name="address"
-              value={post.email}
+              value={post.address.street}
               onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your address"
@@ -134,7 +134,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               Phone
             </label>
             <input
-              type="number"
+              type="text"
               id="phone"
               name="phone"
               value={post.phone}
