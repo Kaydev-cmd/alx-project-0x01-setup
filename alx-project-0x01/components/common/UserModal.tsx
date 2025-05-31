@@ -138,6 +138,22 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+          <div className="mb-4">
+            <label
+              htmlFor="website"
+              className="block text-gray-700 font-medium mb-2"
+            >
+              Website
+            </label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              value={post.website}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
         </form>
       </div>
     </div>
