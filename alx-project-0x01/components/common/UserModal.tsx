@@ -177,6 +177,14 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
               placeholder="Company name"
             />
           </div>
+          <div className="flex justify-between items-center">
+            <button
+              type="submit"
+              className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+            >
+              Add User
+            </button>
+          </div>
         </form>
       </div>
     </div>
