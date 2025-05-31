@@ -20,7 +20,15 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
     <div className="flex flex-col h-screen">
       <Header />
       <main className="p-4">
-        <h1 className="text-2xl font-semibold">Users </h1>
+        <div className="flex justify-between">
+          <h1 className="text-2xl font-semibold">Users </h1>
+          <button
+            onClick={() => setModalOpen(true)}
+            className="bg-blue-700 px-4 py-2 rounded-md text-white"
+          >
+            Add User
+          </button>
+        </div>
         <div className="grid grid-cols-3 gap-4">
           {users?.map(
             (
