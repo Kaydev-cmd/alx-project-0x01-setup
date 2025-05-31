@@ -31,6 +31,12 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
     setPost((prevPost) => ({ ...prevPost, [name]: value }));
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit(post);
+    onClose();
+  };
+
   return <div>UserModal</div>;
 };
 
